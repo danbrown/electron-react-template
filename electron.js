@@ -12,9 +12,9 @@ function createWindow() {
   mainWindow = new BrowserWindow({ width: 900, height: 680 });
   mainWindow.loadURL(
     isDev
-      ? "https://youtube.com"
+      ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
-    // ? "http://localhost:3000"
+    // ? "https://youtube.com"
   );
   mainWindow.on("closed", () => (mainWindow = null));
 }
